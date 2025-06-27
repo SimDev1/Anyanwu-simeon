@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 
 const navItems = [
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '#About' },
   { label: 'Technical Expertise', href: '#Skills' },
   { label: 'Projects', href: '#Projects' },
   { label: 'Contact', href: '#Contact' },
@@ -46,7 +46,7 @@ function Navbar() {
       <Typography
         variant="h6"
         component="a"
-        href="#about"
+        href="#About"
         sx={{
           textAlign: 'center',
           fontWeight: 700,
@@ -124,7 +124,7 @@ function Navbar() {
             <Typography
               variant="h6"
               component="a"
-              href="#about"
+              href="#About"
               sx={{
                 flexGrow: 1,
                 fontFamily: 'Inter, Roboto, sans-serif',
