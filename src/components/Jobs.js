@@ -57,7 +57,7 @@ const projectData = [
     status: 'Live',
   },
   {
-    image: '/portfolio.PNG',
+    image: '/profile.png',
     title: 'Portfolio V2',
     description:
       'Revamped personal portfolio featuring interactive animations, project showcase, and contact integration.',
