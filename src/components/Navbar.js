@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 
 const navItems = [
-  { label: 'About', href: '#About' },
+  { label: 'About', href: '#about' },
   { label: 'Technical Expertise', href: '#Skills' },
   { label: 'Projects', href: '#Projects' },
   { label: 'Contact', href: '#Contact' },
@@ -33,18 +33,20 @@ function Navbar() {
   const drawerContent = (
     <Box
       sx={{
-        width: 260,
+        width: '100%',
+        maxWidth: 300,
         backgroundColor: '#111',
         height: '100%',
         color: '#fff',
         py: 3,
+        boxSizing: 'border-box',
       }}
       onClick={toggleDrawer}
     >
       <Typography
         variant="h6"
         component="a"
-        href="#About"
+        href="#about"
         sx={{
           textAlign: 'center',
           fontWeight: 700,
@@ -77,6 +79,7 @@ function Navbar() {
               },
               transition: 'all 0.3s ease',
               color: '#00e0ff',
+              whiteSpace: 'nowrap',
             }}
           >
             <ListItemText
@@ -102,13 +105,26 @@ function Navbar() {
           sx={{
             backgroundColor: 'rgba(0,0,0,0.85)',
             backdropFilter: 'blur(8px)',
+            width: '100%',
+            left: 0,
+            top: 0,
+            zIndex: 1300,
+            overflowX: 'hidden',
           }}
         >
-          <Toolbar sx={{ px: { xs: 2, sm: 4 } }}>
+          <Toolbar
+            sx={{
+              px: { xs: 2, sm: 4 },
+              width: '100%',
+              overflowX: 'hidden',
+              m: '0 auto',
+              boxSizing: 'border-box',
+            }}
+          >
             <Typography
               variant="h6"
               component="a"
-              href="#About"
+              href="#about"
               sx={{
                 flexGrow: 1,
                 fontFamily: 'Inter, Roboto, sans-serif',
@@ -160,6 +176,7 @@ function Navbar() {
                       color: '#00e0ff',
                       transform: 'scale(1.05)',
                     },
+                    whiteSpace: 'nowrap',
                   }}
                 >
                   {item.label}
@@ -170,7 +187,17 @@ function Navbar() {
         </AppBar>
       </Slide>
 
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer}>
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={toggleDrawer}
+        PaperProps={{
+          sx: {
+            width: '100vw',
+            maxWidth: 300,
+          },
+        }}
+      >
         {drawerContent}
       </Drawer>
     </>
