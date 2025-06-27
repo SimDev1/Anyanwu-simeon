@@ -1,6 +1,9 @@
-body {
+body{
   background: linear-gradient(135deg,  #0f0f0f, #1a1a1a);
-
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
   background-repeat: no-repeat;
   color: 'white';
   background-attachment: fixed;
@@ -12,6 +15,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
